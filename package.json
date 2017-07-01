@@ -1,0 +1,32 @@
+{
+  "name": "mongo-scrapper-app",
+  "version": "1.0.0",
+  "description": "mongo web scrapper app using node express cheerio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sand0959/mongo-scrapper-app.git"
+  },
+  "keywords": [
+    "mongo",
+    "scrapper",
+    "cheerio"
+  ],
+  "author": "Ted Sandridge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sand0959/mongo-scrapper-app/issues"
+  },
+  "homepage": "https://github.com/sand0959/mongo-scrapper-app#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.0",
+    "request": "^2.81.0"
+  }
+}
