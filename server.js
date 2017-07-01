@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require('request');
-var logger = require('morgon');
+var logger = require('morgan');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -13,9 +13,9 @@ var Article = require('./models/Article.js');
 
 var app = express();
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded)({
+app.use(bodyParser.urlencoded({
 	extended: false
-}));
+}))
 
 app.use(express.static(process.cwd() + '/public'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -36,8 +36,7 @@ db.once('open', function() {
 var router = require('./controllers/controller.js');
 app.use('/', router);
 
-var port = process.env.PORT || 7134;
-app.listen(port, function() {
-	console.log('App running on port: ' port);
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+  console.log('Running on port: ' + port);
 });
-
